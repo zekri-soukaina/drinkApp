@@ -1,0 +1,17 @@
+/* .Button {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+   */
+
+.Button {
+  margin-top: 1rem;
+  border-radius: 10px;
+  border: none;
+  padding: 1rem;
+  background-color: #67e2c5;
+  color: rgb(1, 0, 0);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
