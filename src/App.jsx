@@ -1,20 +1,23 @@
+// import { Button } from "./components/ui/Button";
+
+import { useState } from "react";
 import "./App.css";
-import { DrinkButtons } from "./components/DrinkButtons";
 import { DrinkChoice } from "./components/DrinkChoice";
-import { tea, coffee } from "./utils/data";
+import { DrinkSearch } from "./components/DrinkSearch";
 
 export const App = () => {
+  const [userDrink, setUserDrink] = useState();
+
   const greeting = "Welcome to our cafe!";
-  const userDrink = undefined;
 
   return (
-    <div className="app">
+    <div className="App">
       {userDrink ? (
-        <DrinkChoice drink={userDrink} />
+        <DrinkChoice drink={userDrink} onClick={setUserDrink} />
       ) : (
         <>
-          <h1> {greeting} </h1>
-          <DrinkButtons drinkOne={tea.name} drinkTwo={coffee.name} />
+          <h1>{greeting}</h1>
+          <DrinkSearch clickFn={setUserDrink} />
         </>
       )}
     </div>
