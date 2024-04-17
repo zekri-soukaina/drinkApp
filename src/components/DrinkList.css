@@ -1,0 +1,6 @@
+.list-drinks {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 500px;
+}

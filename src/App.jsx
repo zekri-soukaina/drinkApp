@@ -1,9 +1,7 @@
-// import { Button } from "./components/ui/Button";
-
+import { Center, Heading } from "@chakra-ui/react";
 import { useState } from "react";
-import "./App.css";
-import { DrinkChoice } from "./components/DrinkChoice";
-import { DrinkSearch } from "./components/DrinkSearch";
+import { DrinkChoice } from "./pages/DrinkChoice";
+import { DrinkSearch } from "./pages/DrinkSearch";
 
 export const App = () => {
   const [userDrink, setUserDrink] = useState();
@@ -11,15 +9,17 @@ export const App = () => {
   const greeting = "Welcome to our cafe!";
 
   return (
-    <div className="App">
+    <Center h="100vh" flexDir="column">
       {userDrink ? (
-        <DrinkChoice drink={userDrink} onClick={setUserDrink} />
+        <DrinkChoice drink={userDrink} clickFn={setUserDrink} />
       ) : (
         <>
-          <h1>{greeting}</h1>
+          <Heading size="2xl" mb={8} color="blue.200">
+            {greeting}
+          </Heading>
           <DrinkSearch clickFn={setUserDrink} />
         </>
       )}
-    </div>
+    </Center>
   );
 };
