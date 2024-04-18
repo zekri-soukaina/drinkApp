@@ -14,7 +14,7 @@ export const App = () => {
         <DrinkChoice drink={userDrink} clickFn={setUserDrink} />
       ) : (
         <>
-          <Heading size="2xl" mb={8} color="blue.200">
+          <Heading size="2xl" mb={8} color="teal">
             {greeting}
           </Heading>
           <DrinkSearch clickFn={setUserDrink} />
